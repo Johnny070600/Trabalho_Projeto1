@@ -62,4 +62,17 @@ class Login : AppCompatActivity() {
             }
         })
     }
+    override fun onStart() {
+        super.onStart()
+        var token = getSharedPreferences("nome", Context.MODE_PRIVATE)
+        if(token.getString("nome_login_atual"," ") != " ") {
+
+
+            val intent = Intent(this@Login, MainActivity::class.java)
+
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+            startActivity(intent)
+        }
+    }
 }
