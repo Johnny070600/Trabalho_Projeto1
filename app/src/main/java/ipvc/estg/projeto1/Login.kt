@@ -68,7 +68,7 @@ class Login : AppCompatActivity() {
         if(token.getString("nome_login_atual"," ") != " ") {
 
 
-            val intent = Intent(this@Login, MainActivity::class.java)
+            val intent = Intent(this@Login, MainActivity::class.java)   //
 
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
 
